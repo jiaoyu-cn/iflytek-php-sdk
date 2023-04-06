@@ -1,0 +1,33 @@
+{
+  "name": "nanjishidu/iflytek-php-sdk",
+  "description": "讯飞 PHP SDK",
+  "license": "Apache-2.0",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "Nanjishidu\\IflytekPhpSdk\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "nanjishidu",
+      "email": "yijialiu212@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.3",
+    "ext-json": "*",
+    "illuminate/support": "^6.20",
+    "guzzlehttp/guzzle": "~6.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nanjishidu\\IflytekPhpSdk\\Support\\Laravel\\ServiceProvider\\Iflytek"
+      ],
+      "aliases": {
+        "iflytek": "Nanjishidu\\IflytekPhpSdk\\Support\\Laravel\\Facade\\Iflytek"
+      }
+    }
+  }
+}
