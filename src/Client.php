@@ -1,9 +1,9 @@
 <?php
 
-namespace Nanjishidu\IflytekPhpSdk;
+namespace Githen\IflytekPhpSdk;
 
 use Illuminate\Support\Str;
-use Nanjishidu\IflytekPhpSdk\Traits\WebTextCorrectionTrait;
+use Githen\IflytekPhpSdk\Traits\WebTextCorrectionTrait;
 use GuzzleHttp\Handler\CurlHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Middleware;

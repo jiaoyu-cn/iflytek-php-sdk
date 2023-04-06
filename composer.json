@@ -5,7 +5,7 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "Nanjishidu\\IflytekPhpSdk\\": "src/"
+      "Githen\\IflytekPhpSdk\\": "src/"
     }
   },
   "authors": [
@@ -23,10 +23,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Nanjishidu\\IflytekPhpSdk\\Support\\Laravel\\ServiceProvider\\Iflytek"
+        "Githen\\IflytekPhpSdk\\Support\\Laravel\\ServiceProvider\\Iflytek"
       ],
       "aliases": {
-        "iflytek": "Nanjishidu\\IflytekPhpSdk\\Support\\Laravel\\Facade\\Iflytek"
+        "iflytek": "Githen\\IflytekPhpSdk\\Support\\Laravel\\Facade\\Iflytek"
       }
     }
   }

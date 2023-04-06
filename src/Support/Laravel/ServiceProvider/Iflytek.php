@@ -1,6 +1,6 @@
 <?php
 
-namespace Nanjishidu\IflytekPhpSdk\Support\Laravel\ServiceProvider;
+namespace Githen\IflytekPhpSdk\Support\Laravel\ServiceProvider;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
@@ -27,7 +27,7 @@ class Iflytek extends LaravelServiceProvider
     public function register()
     {
         $this->app->bind('iflytek', function ($app) {
-            $client = new \Nanjishidu\IflytekPhpSdk\Client([
+            $client = new \Githen\IflytekPhpSdk\Client([
                 'app_id' => $app['config']->get('iflytek.app_id'),
                 'api_secret' => $app['config']->get('iflytek.api_secret'),
                 'api_key' => $app['config']->get('iflytek.api_key'),

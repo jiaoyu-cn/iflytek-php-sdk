@@ -1,6 +1,6 @@
 <?php
 
-namespace Nanjishidu\IflytekPhpSdk\Traits;
+namespace Githen\IflytekPhpSdk\Traits;
 
 
 use Illuminate\Support\Str;
