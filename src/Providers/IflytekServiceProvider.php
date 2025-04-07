@@ -1,13 +1,13 @@
 <?php
 
-namespace Githen\IflytekPhpSdk\Support\Laravel\ServiceProvider;
+namespace Githen\IflytekPhpSdk\Providers;
 
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
 /**
  * 自动注册为服务
  */
-class Iflytek extends LaravelServiceProvider
+class IflytekServiceProvider extends LaravelServiceProvider
 {
     /**
      * 启动服务
@@ -26,7 +26,7 @@ class Iflytek extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->app->bind('iflytek', function ($app) {
+        $this->app->bind('jiaoyu.iflytek', function ($app) {
             $client = new \Githen\IflytekPhpSdk\Client([
                 'app_id' => $app['config']->get('iflytek.app_id'),
                 'api_secret' => $app['config']->get('iflytek.api_secret'),
@@ -43,7 +43,7 @@ class Iflytek extends LaravelServiceProvider
      */
     public function provides()
     {
-        return array('iflytek');
+        return array('jioayu.iflytek');
     }
 
 }

@@ -125,7 +125,8 @@ class Client
         $handlerStack = HandlerStack::create(new CurlHandler());
         $handlerStack->push(Middleware::retry($this->retryDecider(), $this->retryDelay()));
         $httpClient = new GuzzleHttpClient([
-            'timeout' => 6,
+            'timeout' => 60,
+            'verify' => false,
             'handler' => $handlerStack,
         ]);
         try {

@@ -60,8 +60,11 @@ trait WebTextCorrectionTrait
             $requestJson['parameter']['s9a87e3ec']['res_id'] = $options['res_id'];
         }
         $resp = $this->httpPost($uri, ['headers' => ['Content-Type' => 'application/json;charset=UTF-8'], 'json' => $requestJson]);
-        if (isset($resp['code']) && $resp['code'] != 0) {
-            return $this->message('2000', '操作失败');
+        if (isset($resp['code']) && $resp['code'] != '0000') {
+            return $resp;
+        }
+        if ($resp['header']['code'] != 0) {
+            return $this->message('2000', $resp['header']['message']);
         }
         $data = [];
         $text = $resp['payload']['result']['text'] ?? '';
@@ -82,7 +85,7 @@ trait WebTextCorrectionTrait
      */
     public function resIdGet($blackList = '', $whiteList = '', $options = [])
     {
-        if (empty($blackList) || empty($whiteList)){
+        if (empty($blackList) || empty($whiteList)) {
             return $this->message('2000', '黑白名单参数不能同时为空');
         }
         $apiURL = "https://evo-gen.xfyun.cn/individuation/gen/upload";

@@ -8,9 +8,9 @@ return [
     |
     */
     // 开放平台 AppId
-    'app_id' => '',
+    'app_id' => env('IFLYTEK_APP_ID',''),
     // 开放平台秘钥 APISecret
-    'api_secret' => '',
+    'api_secret' => env('IFLYTEK_API_SECRET',''),
     // 开放平台秘钥 APIKey
-    'api_key' => '',
+    'api_key' => env('IFLYTEK_API_KEY',''),
 ];

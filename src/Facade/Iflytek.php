@@ -1,5 +1,5 @@
-<?php 
-namespace Githen\IflytekPhpSdk\Support\Laravel\Facade;
+<?php
+namespace Githen\IflytekPhpSdk\Facade;
 
 use Illuminate\Support\Facades\Facade;
 

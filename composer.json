@@ -1,33 +1,33 @@
 {
-  "name": "githen/iflytek-php-sdk",
-  "description": "讯飞 PHP SDK",
-  "license": "Apache-2.0",
-  "type": "library",
-  "autoload": {
-    "psr-4": {
-      "Githen\\IflytekPhpSdk\\": "src/"
+    "name": "githen/iflytek-php-sdk",
+    "description": "讯飞 PHP SDK",
+    "license": "Apache-2.0",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Githen\\IflytekPhpSdk\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nanjishidu",
+            "email": "yijialiu212@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "ext-json": "*",
+        "illuminate/support": "^6.20|^8.0",
+        "guzzlehttp/guzzle": "~6.0|^7.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Githen\\IflytekPhpSdk\\Providers\\IflytekServiceProvider"
+            ],
+            "aliases": {
+                "iflytek": "Githen\\IflytekPhpSdk\\Facade\\Iflytek"
+            }
+        }
     }
-  },
-  "authors": [
-    {
-      "name": "nanjishidu",
-      "email": "yijialiu212@gmail.com"
-    }
-  ],
-  "require": {
-    "php": "^7.3",
-    "ext-json": "*",
-    "illuminate/support": "^6.20",
-    "guzzlehttp/guzzle": "~6.0"
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Githen\\IflytekPhpSdk\\Support\\Laravel\\ServiceProvider\\Iflytek"
-      ],
-      "aliases": {
-        "iflytek": "Githen\\IflytekPhpSdk\\Support\\Laravel\\Facade\\Iflytek"
-      }
-    }
-  }
 }
